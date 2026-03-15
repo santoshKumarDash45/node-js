@@ -3,9 +3,9 @@
 const http = require("http");
 
 function reqListener(req, res) {
-	console.log("res0", req, res);
+	console.log("res", req, res);
 
-	
+
 }
 
 http.createServer(reqListener);
