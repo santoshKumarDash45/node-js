@@ -2,10 +2,13 @@
 
 const http = require("http");
 
-function reqListener(req, res) {
-	console.log("res", req, res);
+function rqListener(req, res) {
+  console.log(req.url);
 
-
+  res.write("Hello Node Server");
+  res.end();
 }
 
-http.createServer(reqListener);
+const server = http.createServer(rqListener);
+
+server.listen(3000);
